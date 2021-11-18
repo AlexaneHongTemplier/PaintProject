@@ -24,6 +24,8 @@ public class Window extends JFrame implements ActionListener {
         menu1.add(open);
         m.add(menu1);
 
+        contentPanel.add(drawing);
+
         JButton BlackButton = new JButton("Noir");
         BlackButton.setBackground(Color.black);
         BlackButton.setForeground(Color.white);
@@ -135,16 +137,16 @@ public class Window extends JFrame implements ActionListener {
                 drawing.setC(Color.orange);
                 break;
             case "Ellipse":
-                drawing.setFigureName("Ellipse");
+                drawing.setFigure(new Ellipse(drawing.getC(),new fr.ensea.projet2A.MyPoint(drawing.getX(), drawing.getY())));
                 break;
             case "Cercle":
-                drawing.setFigureName("Circle");
+                drawing.setFigure(new Circle(drawing.getC(),new fr.ensea.projet2A.MyPoint(drawing.getX(), drawing.getY())));
                 break;
             case "Rectangle":
-                drawing.setFigureName("Rectangle");
+                drawing.setFigure(new Rectangle(drawing.getC(),new fr.ensea.projet2A.MyPoint(drawing.getX(), drawing.getY())));
                 break;
             case "Carré":
-                drawing.setFigureName("Square");
+                drawing.setFigure(new Square(drawing.getC(),new fr.ensea.projet2A.MyPoint(drawing.getX(), drawing.getY())));
                 break;
 
         }

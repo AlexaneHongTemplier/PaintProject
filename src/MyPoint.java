@@ -1,15 +1,15 @@
 package fr.ensea.projet2A;
 
-public class Point {
+public class MyPoint {
     private Integer X;
     private Integer Y;
 
-    public Point(){
+    public MyPoint(){
         X = 0;
         Y = 0;
     }
 
-    public Point(Integer X, Integer Y){
+    public MyPoint(Integer X, Integer Y){
         this.X = X;
         this.Y = Y;
     }
@@ -31,8 +31,8 @@ public class Point {
     }
 
     static public void main(String args[]){
-        Point zero = new Point();
-        Point random = new Point(45,36);
+        fr.ensea.projet2A.MyPoint zero = new fr.ensea.projet2A.MyPoint();
+        fr.ensea.projet2A.MyPoint random = new fr.ensea.projet2A.MyPoint(45,36);
         System.out.println(zero);
         System.out.println(random);
     }

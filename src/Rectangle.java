@@ -1,11 +1,12 @@
-import fr.ensea.projet2A.Point;
 import java.awt.Graphics;
 import java.awt.Color;
 
 public class Rectangle extends Figure {
 
+    int length;
+    int width;
 
-    public Rectangle(Color c, Point point) {
+    public Rectangle(Color c, fr.ensea.projet2A.MyPoint point) {
         super(c, point);
     }
 
@@ -14,12 +15,15 @@ public class Rectangle extends Figure {
         int y1 = getPoint().getY();
         int x2 = x1+lengthBB;
         int y2 = y1+widthBB;
+
+        this.length = lengthBB;
+        this.width = widthBB;
     }
 
 
 
     public void draw (Graphics g){
-        g.drawRect();
+        g.drawRect(getPoint().getX(), getPoint().getY(), length,width);
     }
 
 }

@@ -1,9 +1,11 @@
-import fr.ensea.projet2A.Point;
 import java.awt.Graphics;
 import java.awt.Color;
 
 public class Circle extends Ellipse {
-    public Circle (Color c, Point point) {
+
+    int length;
+
+    public Circle (Color c, fr.ensea.projet2A.MyPoint point) {
         super(c, point);
     }
 
@@ -20,9 +22,10 @@ public class Circle extends Ellipse {
         int y1 = getPoint().getY();
         int x2 = x1+l;
         int y2 = y1+l;
+        this.length = l;
     }
 
     public void draw (Graphics g){
-
+        g.drawOval(getPoint().getX(), getPoint().getY(), length,length);
     }
 }
