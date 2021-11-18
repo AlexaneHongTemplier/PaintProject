@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 
 public class Window extends JFrame implements ActionListener {
 
-    public Color c;
     public Figure figure;
+    private final MyDrawing drawing = new MyDrawing();
     public Window(String Title, int x, int y) {
         super(Title);
         this.setSize(x, y);
@@ -111,40 +111,40 @@ public class Window extends JFrame implements ActionListener {
         String cmd = e.getActionCommand();
         switch (cmd) {
             case "Noir":
-                c = Color.black;
+                drawing.setC(Color.black);
                 break;
             case "Rouge":
-                c = Color.RED;
+                drawing.setC(Color.RED);
                 break;
             case "Vert":
-                c = Color.green;
+                drawing.setC(Color.green);
                 break;
             case "Bleu":
-                c = Color.blue;
+                drawing.setC(Color.blue);
                 break;
             case "Jaune":
-                c = Color.yellow;
+                drawing.setC(Color.yellow);
                 break;
             case "Rose":
-                c = Color.pink;
+                drawing.setC(Color.pink);
                 break;
             case "Magenta":
-                c = Color.magenta;
+                drawing.setC(Color.magenta);
                 break;
             case "Orange":
-                c = Color.orange;
+                drawing.setC(Color.orange);
                 break;
             case "Ellipse":
-                figure = new Ellipse(c,new fr.ensea.projet2A.Point());
+                drawing.setFigureName("Ellipse");
                 break;
             case "Cercle":
-                figure = new Circle(c,new fr.ensea.projet2A.Point());
+                drawing.setFigureName("Circle");
                 break;
             case "Rectangle":
-                figure = new Rectangle(c,new fr.ensea.projet2A.Point());
+                drawing.setFigureName("Rectangle");
                 break;
             case "Carré":
-                figure = new Square(c,new fr.ensea.projet2A.Point());
+                drawing.setFigureName("Square");
                 break;
 
         }
